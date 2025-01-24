@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<section style="margin-top: 100px;" aria-label="Main content" role="main" class="product-detail">
+    <div itemscope itemtype="http://schema.org/Product">
+        <meta itemprop="url" content="http://html-koder-test.myshopify.com/products/tommy-hilfiger-t-shirt-new-york">
+        <meta itemprop="image" content="//cdn.shopify.com/s/files/1/1047/6452/products/product_grande.png?v=1446769025">
+        <div class="shadow">
+            <div class="_cont detail-top">
+                <div class="cols">
+                    <div class="left-col">
+                        <div class="big">
+                            <span id="big-image" class="img"  style="background-image: url({{product.imageUrl}})" data-src="//cdn.shopify.com/s/files/1/1047/6452/products/product_1024x1024.png?v=1446769025"></span>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <h1 itemprop="name">{{product.category}} / {{product.name}}</h1>
+                        <div >
+                           
+                           
+                            <div class="price-shipping">
+                                <div class="price" id="price-preview" >
+                                    {{product.price}}
+                                </div>
+                            </div>
+                        </div>
+                       <h3 style="font-weight: 600; font-size: 20px;">Description</h3>
+                       <p>{{product.desc}}</p>
+                       <br/>
+                       <span style="font-weight: 600; font-size: 20px;">Quantity</span><input type="number" min="1" [defaultValue]="1" max="10" style=" margin-left:15px   ;  color: #F72E9D; border-radius: 12px;"/>
+                       <br/>
+                       <br/>
+                       <button class="addCart"><i class="ri-shopping-cart-fill"></i> Add To Cart</button>
+
+                    
+                            
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="related">
+        <div class="_cont">
+            <h2>You might also like</h2>
+            <div class="collection-list cols-4" id="collection-list" data-products-per-page="4"  >
+                <a class="product-box" *ngFor="let sugg of suggestions"  (click)="navigateToProduct(sugg.id)">
+                    <span class="img">
+                        <span style="background-image: url({{sugg.imageUrl}})" class="i first"></span>
+                        <span class="i second" style="background-image: url('//cdn.shopify.com/s/files/1/1047/6452/products/product_030f9fc5-f253-4dca-a43a-fe2b719d0704_grande.png?v=1447530130')"></span>
+                    </span>
+                    <span class="text">
+                        <strong>{{sugg.name}}</strong>
+                        <span>
+                           {{sugg.price}}
+                        </span>
+                    </span>
+                </a>
+               
+            </div>
+        </div>
+    </aside>
+</section>
+
+<app-footer></app-footer>

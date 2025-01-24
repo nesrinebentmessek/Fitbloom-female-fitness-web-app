@@ -1,0 +1,165 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "fitbloom": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/fitbloom",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+
+           "styles": [
+  "src/styles.css",
+  "node_modules/ngx-toastr/toastr.css",
+
+"node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+
+  "src/assets/plugins/bootstrap/bootstrap.min.css",
+  "src/assets/plugins/slick/slick.css",
+  "src/assets/plugins/Venobox/venobox.css",
+  "src/assets/plugins/aos/aos.css",
+
+    
+  "src/assets/plugins/bootstrap/bootstrap.min.css",
+  "src/assets/plugins/themify/css/themify-icons.css",
+  "src/assets/plugins/counto/animate.css",
+  "src/assets/plugins/aos/aos.css",
+  "src/assets/plugins/owl-carousel/owl.carousel.min.css",
+  "src/assets/plugins/owl-carousel/owl.theme.default.min.css",
+  "src/assets/plugins/magnific-popup/magnific-popup.css",
+  "src/assets/plugins/animated-text/animated-text.css",
+"src/assets/plugins/bootstrap/bootstrap.min.css",
+  "src/assets/plugins/themify-icons/themify-icons.css",
+  "src/assets/css/style.css",
+  "src/assets/css/styles.scss"
+],
+"scripts": [
+
+"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+
+  "src/assets/plugins/jQuery/jquery.min.js",
+  "src/assets/plugins/bootstrap/bootstrap.min.js",
+  "src/assets/plugins/slick/slick.min.js",
+  "src/assets/plugins/Venobox/venobox.min.js",
+  "src/assets/plugins/aos/aos.js",
+
+  "src/assets/plugins/jQuery/jquery.min.js",
+  "src/assets/plugins/bootstrap/bootstrap.min.js",
+  "src/assets/plugins/aos/aos.js",
+  "src/assets/plugins/owl-carousel/owl.carousel.min.js",
+  "src/assets/plugins/shuffle/shuffle.min.js",
+  "src/assets/plugins/magnific-popup/jquery.magnific-popup.min.js",
+  "src/assets/plugins/animated-text/animated-text.js",
+  "src/assets/plugins/counto/apear.js",
+  "src/assets/plugins/counto/counTo.js",
+
+  "src/assets/plugins/jQuery/jquery.min.js",
+  "src/assets/plugins/bootstrap/bootstrap.min.js",
+  "src/assets/plugins/masonry/masonry.min.js",
+  "src/assets/plugins/clipboard/clipboard.min.js",
+  "src/assets/plugins/match-height/jquery.matchHeight-min.js",
+
+  "src/assets/js/script.js",
+  "src/assets/js/chrono.js"
+]
+
+
+
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "fitbloom:build:production"
+            },
+            "development": {
+              "buildTarget": "fitbloom:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "fitbloom:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

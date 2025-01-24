@@ -1,0 +1,207 @@
+<body>
+  <!-- Navbar Component -->
+  <app-navbar></app-navbar>
+
+  <!-- Page Top Section -->
+  <section 
+    class="page-top-section text-white" 
+    [ngStyle]="{
+      'background-image': 'url(assets/images/home/image_3.jpg)', 
+      'margin-top': '95px', 
+      'margin-bottom': '20px'
+    }" 
+    style="position: relative; background-size: cover; background-position: center;">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 m-auto text-center" style="position: relative; z-index: 1;">
+          <h1 data-aos="fade-up" class="mb-5" style="color: #fff;">
+            Experience the magic of <span class="typed-words">movement</span>
+          </h1>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+<br>
+<br>
+
+  <div class="about-section">
+    <h2>Who are we?</h2>
+    <p>
+      FitBloom is dedicated to helping women embrace strength and confidence. 
+      We offer tailored workouts, healthy recipes, and a curated shop to support 
+      your fitness journey and inspire a healthier, happier you.
+    </p>
+  </div>
+  
+  <br>
+
+
+
+   <div class="block-half-content-1 d-block d-lg-flex mt-5">
+      <div class="block-half-content-img" style="background-image: url('assets/images/home/image_1.jpg')">
+        
+      </div>
+      
+      <div class="block-half-content-text ">
+        <div class="block-half-content-text-inner">
+          <h2 class="block-half-content-heading mb-4">Why Choose Us</h2>
+          <div class="block-half-content-excerpt">
+          <p class="lead">Because we are here to inspire and empower women to embrace their strength, build healthy habits, and achieve fitness goals in a supportive and motivating environment tailored just for you.</p>
+          </div>
+        </div> 
+        <br>
+
+        <div class="block-counter-1 section-counter">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="3">7</span><span class="append">K</span>
+                </div>
+                <span class="block-counter-1-caption">Happy Customers</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="7">15</span><span class="append
+"></span>
+                </div>
+                <span class="block-counter-1-caption">Years of Experience</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="counter">
+                <div class="number-wrap">
+                  <span class="block-counter-1-number" data-number="100">100</span><span class="append">%</span>
+                </div>
+                <span class="block-counter-1-caption">Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="about-section">
+      <h2>What We Offer</h2>
+      <p>
+        At FitBloom, we provide comprehensive programs designed for women, delicious and healthy recipes, a curated shop for all your fitness needs, and an easy-to-use BMI calculator to track your progress and stay motivated.
+      </p>
+    </div>
+    <br>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+          <div class="rowservice">
+              <!-- Programs -->
+              <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="offer-deal text-center">
+                      <div class="img" style="background-image: url('assets/images/classes-1.jpg');"></div>
+                      <div class="text mt-4">
+                          <h3 class="mb-4">Programs</h3>
+                          <p class="mb-5">Explore a variety of fitness programs tailored to your needs and goals. From yoga to strength training.</p>
+                          <p><a routerLink="/programs" class="btn btn-white px-4 py-3">Learn more <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Recipe -->
+              <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="offer-deal text-center">
+                      <div class="img" style="background-image: url('assets/images/home/recepie.jpg');"></div>
+                      <div class="text mt-4">
+                          <h3 class="mb-4">Recipe</h3>
+                          <p class="mb-5">Find healthy recipes to fuel your body and reach your wellness goals. Delicious and easy-to-make meals.</p>
+                          <p><a routerLink="/recepies" class="btn btn-white px-4 py-3">Learn more <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Shop -->
+              <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="offer-deal text-center">
+                      <div class="img" style="background-image: url('assets/images/home/shop1.jpg');"></div>
+                      <div class="text mt-4">
+                          <h3 class="mb-4">Shop</h3>
+                          <p class="mb-5">Browse our online store for the best fitness equipment, accessories, and apparel. Everything you need to stay fit.</p>
+                          <p><a routerLink="/shop" class="btn btn-white px-4 py-3">Learn more <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- BMI -->
+              <div class="col-md-3 d-flex align-items-stretch">
+                  <div class="offer-deal text-center">
+                      <div class="img" style="background-image: url('assets/images/home/bmi.jpg');"></div>
+                      <div class="text mt-4">
+                          <h3 class="mb-4">BMI Calculator</h3>
+                          <p class="mb-5">Calculate your Body Mass Index (BMI) to assess your weight status and track your health progress.</p>
+                          <p><a routerLink="/bmi" class="btn btn-white px-4 py-3">Learn more <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+
+  <section class="ftco-section testimony-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-10 heading-section text-center">
+          <h2 class="mb-1">Inspiring Transformations</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Testimonial Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="testimony-wrap p-4 text-center shadow">
+            <div class="user-img mb-3" style="background-image: url(assets/images/home/person_1.jpg)"></div>
+            <p class="mb-4">
+              "Joining this community has been life-changing! I feel stronger, healthier, and more confident."
+            </p>
+            <h5 class="name">Sophia Lee</h5>
+            <span class="position">Member</span>
+          </div>
+        </div>
+        <!-- Testimonial Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="testimony-wrap p-4 text-center shadow">
+            <div class="user-img mb-3" style="background-image: url(assets/images/home/person_2.jpg)"></div>
+            <p class="mb-4">
+              "The support and guidance here helped me achieve my fitness goals. I’ve never felt more empowered."
+            </p>
+            <h5 class="name">Emma Brown</h5>
+            <span class="position">Member</span>
+          </div>
+        </div>
+        <!-- Testimonial Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="testimony-wrap p-4 text-center shadow">
+            <div class="user-img mb-3" style="background-image: url(assets/images/home/person_3.jpg)"></div>
+            <p class="mb-4">
+              "I love the positivity and energy in this community! It’s not just fitness—it’s a lifestyle."
+            </p>
+            <h5 class="name">Isabella Green</h5>
+            <span class="position">Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+    
+   
+
+    
+  <!-- Footer Component -->
+  <app-footer></app-footer>
+</body>

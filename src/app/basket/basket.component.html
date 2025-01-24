@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<br/>
+<br/>
+<br/>
+<div class="main">
+  <h2 class="sub-heading">Free shipping from 100 DT</h2>
+
+  <section class="shopping-cart">
+    <ol class="ui-list shopping-cart--list">
+      <!-- Utilisation de *ngFor pour afficher les produits dynamiquement -->
+      <li *ngFor="let product of products; let i = index" class="_grid shopping-cart--list-item">
+        <div class="_column product-image">
+          <img class="product-image--img" [src]="product.img" alt="product.name" width="230%"/>
+        </div>
+        <div class="_column product-info">
+          <h4 class="product-name">{{ product.name }}</h4>
+          <p class="product-desc" style=" margin: 10px 100px .200em;">{{ product.desc }}</p>
+          <div class="price product-single-price">{{ product.price.toFixed(2) }} DT</div>
+        </div>
+        <div class="_column product-modifiers">
+          <div class="_grid">
+            <button class="_btn _column product-subtract" (click)="subtractProduct(i)">&minus;</button>
+            <div class="_column product-qty">{{ product.quantity || 0 }}</div>
+            <button class="_btn _column product-plus" (click)="addProduct(i)">&plus;</button>
+          </div>
+          <button class="_btn entypo-trash product-remove" (click)="removeProduct(i)">Remove</button>
+          <div class="price product-total-price">
+            {{ (product.price * (product.quantity || 0)).toFixed(2) }} DT
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <footer class="_grid cart-totals">
+      <div class="_column subtotal">
+        <div class="cart-totals-key">Subtotal</div>
+        <div class="cart-totals-value">{{ subtotal.toFixed(2) }} DT</div>
+      </div>
+      <div class="_column shipping">
+        <div class="cart-totals-key">Shipping</div>
+        <div class="cart-totals-value">{{ shipping.toFixed(2) }} DT</div>
+      </div>
+      <div class="_column taxes">
+        <div class="cart-totals-key">Taxes (6%)</div>
+        <div class="cart-totals-value">{{ taxes.toFixed(2) }} DT</div>
+      </div>
+      <div class="_column total">
+        <div class="cart-totals-key">Total</div>
+        <div class="cart-totals-value">{{ total.toFixed(2) }} DT</div>
+      </div>
+      <div class="_column checkout">
+        <button class="_btn checkout-btn entypo-forward">Checkout</button>
+      </div>
+    </footer>
+  </section>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+<section class="food_section layout_padding">
+  <div class="container">
+    <br />
+    <br />
+    <br />
+
+    <ul class="filters_menu">
+      <li 
+        [class.active]="selectedCategory === 'all'" 
+        (click)="setCategory('all')"
+      >
+        All
+      </li>
+      <li 
+        [class.active]="selectedCategory === 'snacks'" 
+        (click)="setCategory('snacks')"
+      >
+        Snacks
+      </li>
+      <li 
+        [class.active]="selectedCategory === 'salad'" 
+        (click)="setCategory('salad')"
+      >
+        Salad
+      </li>
+      <li 
+        [class.active]="selectedCategory === 'soup'" 
+        (click)="setCategory('soup')"
+      >
+        Soup
+      </li>
+      <li 
+        [class.active]="selectedCategory === 'smoothie'" 
+        (click)="setCategory('smoothie')"
+      >
+        Smoothies
+      </li>
+    </ul>
+
+
+    <div class="filters-content">
+      <div class="row grid">
+        <div 
+          class="col-sm-6 col-lg-4 all {{ recipe.category }}" 
+          *ngFor="let recipe of getFilteredRecipes()"
+        >
+          <div class="box">
+            <div>
+              <!-- Image tag -->
+              <div class="img-box">
+                <img [src]="recipe.image" [alt]="recipe.name" class="recipe-image" alt="" />
+              </div>
+              <div class="detail-box">
+                <a style="color: #F72E9D;margin-left:250px;" [routerLink]="['/detailsRecipe', recipe.id]"><i class="ri-eye-fill"></i></a>
+                <h5>{{ recipe.name }}</h5>
+                <p>{{ truncateDescription(recipe.description) }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br/>
+    <!-- <div class="btn-box">
+      <a href="">View More</a>
+    </div> -->
+  </div>
+</section>
+<app-footer></app-footer>

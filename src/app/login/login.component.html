@@ -1,0 +1,42 @@
+<div class="parent">
+  <div class="container" [ngClass]="isSignDivVisible ? 'active' : ''" id="container">
+    <div class="form-container sign-up">
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <h3 style="color: #F72E9D;">Create an account</h3>
+        <br />
+        <input type="text" id="lname" formControlName="nom" placeholder="Last Name" />
+        <input type="text" id="name" formControlName="prenom" placeholder="Name" />
+        <input type="email" id="email" formControlName="email" placeholder="Email" />
+        <input type="password" id="pass" formControlName="mdp" placeholder="Password" />
+        <input type="password" id="passConf" formControlName="passConf" placeholder="Confirm Password" />
+        <input type="text" id="tel" formControlName="tel" placeholder="Tel" />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    
+    <div class="form-container sign-in">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <h3 style="color: #F72E9D;">Authentication</h3>
+        <input type="email" id="email" formControlName="email" placeholder="Email" />
+        <input type="password" id="mdp" formControlName="mdp" placeholder="Password" />
+        <br />
+        <button>Sign In</button>
+      </form>
+    </div>
+    
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h3>Welcome!👋</h3>
+          <p>You already have an account?</p>
+          <button class="hidden" id="login" (click)="isSignDivVisible = false">Sign In</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h3>Welcome! 👋</h3>
+          <p>You are not registered?</p>
+          <button class="hidden" id="register" (click)="isSignDivVisible = true">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

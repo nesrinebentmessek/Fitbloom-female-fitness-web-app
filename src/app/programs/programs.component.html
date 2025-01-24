@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<section class="food_section layout_padding">
+  <div class="container">
+    <br />
+    <br />
+    <br />
+
+    <!-- Filters Menu -->
+    <ul class="filters_menu">
+      <li [class.active]="selectedCategory === 'all'" (click)="setCategory('all')">All</li>
+      <li [class.active]="selectedCategory === 'Yoga'" (click)="setCategory('Yoga')">Yoga</li>
+      <li [class.active]="selectedCategory === 'HIIT'" (click)="setCategory('HIIT')">HIIT</li>
+      <li [class.active]="selectedCategory === 'Strength-training'" (click)="setCategory('Strength-training')">Strength Training</li>
+      <li [class.active]="selectedCategory === 'Cardio'" (click)="setCategory('Cardio')">Cardio</li>
+    </ul>
+
+    <br />
+
+    <section class="events-page-section spad">
+    <div class="container">
+        <div class="row g-3">
+            <div 
+                [routerLink]="['/progdetails', program.id]" 
+                class="col-sm-6 col-lg-4 event-card"  
+                *ngFor="let program of getFilteredPrograms()">
+                <div class="event-item">
+                    <div class="ei-img">
+                        <img [src]="program.imageUrl" [alt]="program.name" class="img-fluid rounded" />
+                    </div>
+                    <div class="ei-text text-center">
+                        <h4 class="program-name">{{ program.name }}</h4>
+                        
+        
+                        <p class="program-desc">
+                          {{ program.description }}
+                        </p>
+                        <button class="btn btn-learn-more">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  </div>
+</section>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+
+<!-- Product Section Begin -->
+<section class="product spad">
+   
+        <div class="row">
+            <div class="col-lg-9 col-md-5">
+               
+                <div class="filter__item">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-7">
+                            <div class="filter__sort">
+                                <span>Sort By</span>
+                                <select class="form-select" style="color: #F72E9D;" (change)="onFilterChange($event)">
+                                    <option value="All">All</option>
+                                    <option value="Equipment">Equipment</option>
+                                    <option value="Recipe">Recipe</option>
+                                    <option value="Workout Supplement">Workout Supplement</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="filter__found">
+                                <h6 style="color: #06DCD4;" ><span style="color: #06DCD4;">{{ displayedProductsCount }}</span> Products found </h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <div class="filter__option">
+                                <span class="icon_grid-2x2"></span>
+                                <span class="icon_ul"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let product of filteredProducts">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" [style.backgroundImage]="'url(' + product.imageUrl + ')'">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="ri-heart-3-fill"></i></a></li>
+                                        <li><a [routerLink]="['/details', product.id]"><i class="ri-eye-fill"></i></a></li>
+                                        <li><a href="#"><i class="ri-shopping-cart-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">{{ product.name }}</a></h6>
+                                    <h5>{{ product.price }}</h5>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+</section>
+
+<!-- Product Section End -->
+
+
+
+
+
+<app-footer></app-footer>
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
